@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap');
+
+:root {
+  --asap-font: 'ASAP', sans-serif;
+}
+
+.desktop_container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+/* Muscle Juice Banner */
+.muscle_juice_banner {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.banner_logo {
+  margin-bottom: 25px;
+}
+
+.logo_image {
+  width: 350px;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.banner_brand {
+  font-size: 42px;
+  font-weight: bold;
+  color: #3182ce;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  font-family: var(--asap-font);
+  letter-spacing: 2px;
+}
+
+.banner_underline {
+  width: 150px;
+  height: 3px;
+  background: #87ceeb;
+  margin: 0 auto 25px;
+}
+
+.banner_text {
+  margin-bottom: 30px;
+}
+
+.banner_text p {
+  margin: 8px 0;
+  font-size: 22px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Social Icons */
+.social_icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.social_icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.social_icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.1);
+  background: rgba(49, 130, 206, 0.1);
+  box-shadow: 0 8px 25px rgba(49, 130, 206, 0.3);
+}
+
+.social_icon_image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social_icon:hover .social_icon_image {
+  box-shadow: none;
+}
+
+/* BioCore Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.brand_name {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  color: #000;
+  margin: 0;
+}
+
+/* Table Styles */
+.table_section {
+  margin-bottom: 40px;
+}
+
+/* Custom Scrollbar Styles */
+.table_section::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table_section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table_section::-webkit-scrollbar-thumb {
+  background: #3182ce;
+  border-radius: 4px;
+}
+
+.table_section::-webkit-scrollbar-thumb:hover {
+  background: #2c5aa0;
+}
+
+/* Firefox scrollbar */
+.table_section {
+  scrollbar-width: thin;
+  scrollbar-color: #3182ce #f1f1f1;
+}
+
+.product_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  border: 2px solid #3182ce;
+}
+
+.product_table th {
+  background: #4a5568;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #3182ce;
+}
+
+.product_table.second_table th {
+  background: #3182ce;
+  border: 1px solid #3182ce;
+  text-align: center;
+}
+
+.product_table td {
+  padding: 12px 10px;
+  border: 1px solid #3182ce;
+  font-size: 14px;
+  background: white;
+  text-align: center;
+}
+
+.product_table tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.product_table tr:hover td {
+  background: #e6f3ff;
+}
+
+/* Companies Section */
+.companies_section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+  padding: 30px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.company_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.company_icon {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company_logo_image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .desktop-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .logo_image {
+    width: 300px;
+    max-height: 350px;
+  }
+
+  .logo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .company_icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .muscle_juice_banner {
+    padding: 20px 10px;
+    margin-bottom: 30px;
+  }
+
+  .banner_brand {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  .banner_text p {
+    font-size: 18px;
+  }
+
+  .logo_image {
+    width: 220px;
+    max-height: 260px;
+  }
+
+  .logo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .brand_name {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .social_icons {
+    gap: 15px;
+  }
+
+  .social_icon {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+  }
+
+  .companies_section {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .company_icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .table_section {
+    margin-bottom: 30px;
+    overflow-x: auto;
+  }
+
+  .product_table {
+    min-width: 600px;
+    font-size: 12px;
+  }
+
+  .product_table th,
+  .product_table td {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .muscle-juice-banner {
+    padding: 15px 5px;
+  }
+
+  .banner_brand {
+    font-size: 28px;
+  }
+
+  .banner_text p {
+    font-size: 16px;
+  }
+
+  .logo_image {
+    width: 170px;
+    max-height: 200px;
+  }
+
+  .logo {
+    width: 170px;
+    height: 170px;
+  }
+
+  .brand_name {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .social_icons {
+    gap: 10px;
+  }
+
+  .social_icon {
+    width: 45px;
+    height: 45px;
+    padding: 6px;
+  }
+
+  .company_icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .table_section {
+    overflow-x: auto;
+  }
+
+  .product_table {
+    min-width: 500px;
+    font-size: 11px;
+  }
+
+  .product_table th,
+  .product_table td {
+    padding: 6px 3px;
+    font-size: 11px;
+  }
+}
