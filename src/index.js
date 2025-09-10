@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/**
+ * Application entry point
+ * Creates React root and renders the main App component
+ */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <App />
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Performance monitoring - logs web vitals metrics
+// Can be configured to send data to analytics services
 reportWebVitals();
