@@ -120,37 +120,54 @@ const Home = () => {
   const bannerText = textContent?.text || 'Мы крутые отправка бла';
 
   /**
+   * Gets table headers based on screen size
+   * @returns {Array} Array of header objects with text and mobile text
+   */
+  const getTableHeaders = () => [
+    { text: 'PRODUCT', mobile: 'PROD' },
+    { text: 'ACTIVE SUBSTANCE', mobile: 'SUBST' },
+    { text: 'DOSAGE', mobile: 'DOSE' },
+    { text: 'AVAILABILITY', mobile: 'STOCK' },
+    { text: 'PRICE', mobile: 'PRICE' }
+  ];
+
+  /**
    * Renders a product table with given products and optional CSS class
    * @param {Array} tableProducts - Array of products to display
    * @param {string} tableClass - Optional CSS class for styling
    * @returns {JSX.Element} Table component
    */
-  const renderTable = (tableProducts, tableClass = '') => (
-    <div className={styles.table_section}>
-      <table className={`${styles.product_table} ${tableClass}`}>
-        <thead>
-          <tr>
-            <th>PRODUCT</th>
-            <th>ACTIVE SUBSTANCE</th>
-            <th>DOSAGE</th>
-            <th>AVAILABILITY</th>
-            <th>PRICE</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tableProducts.map((item, index) => (
-            <tr key={index}>
-              <td>{item.product}</td>
-              <td>{item.activeSubstance}</td>
-              <td>{item.dosage}</td>
-              <td>{item.availability}</td>
-              <td>{item.price}</td>
+  const renderTable = (tableProducts, tableClass = '') => {
+    const headers = getTableHeaders();
+    
+    return (
+      <div className={styles.table_section}>
+        <table className={`${styles.product_table} ${tableClass}`}>
+          <thead>
+            <tr>
+              {headers.map((header, index) => (
+                <th key={index} className={styles.table_header}>
+                  <span className={styles.header_desktop}>{header.text}</span>
+                  <span className={styles.header_mobile}>{header.mobile}</span>
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+          </thead>
+          <tbody>
+            {tableProducts.map((item, index) => (
+              <tr key={index}>
+                <td>{item.product}</td>
+                <td>{item.activeSubstance}</td>
+                <td>{item.dosage}</td>
+                <td>{item.availability}</td>
+                <td>{item.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
 
   return (
     <div className={styles.desktop_container}>

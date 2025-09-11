@@ -195,6 +195,15 @@
   border: 1px solid #3182ce;
 }
 
+/* Table header responsive text */
+.header_desktop {
+  display: inline;
+}
+
+.header_mobile {
+  display: none;
+}
+
 .product_table.second_table th {
   background: #3182ce;
   border: 1px solid #3182ce;
@@ -349,6 +358,38 @@
   }
 }
 
+/* Mobile optimization for screens less than 710px */
+@media (max-width: 710px) {
+  .table_section {
+    overflow-x: visible;
+    margin-bottom: 20px;
+  }
+
+  .product_table {
+    width: 100%;
+    min-width: auto;
+    font-size: 11px;
+    table-layout: fixed;
+  }
+
+  .product_table th,
+  .product_table td {
+    padding: 8px 4px;
+    font-size: 11px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Switch to mobile headers */
+  .header_desktop {
+    display: none;
+  }
+
+  .header_mobile {
+    display: inline;
+  }
+}
+
 @media (max-width: 480px) {
   .muscle-juice-banner {
     padding: 15px 5px;
@@ -396,17 +437,28 @@
   }
 
   .table_section {
-    overflow-x: auto;
+    overflow-x: visible;
   }
 
   .product_table {
-    min-width: 500px;
-    font-size: 11px;
+    width: 100%;
+    min-width: auto;
+    font-size: 10px;
+    table-layout: fixed;
   }
 
   .product_table th,
   .product_table td {
-    padding: 6px 3px;
-    font-size: 11px;
+    padding: 6px 2px;
+    font-size: 10px;
+  }
+
+  /* Ensure mobile headers are shown on very small screens */
+  .header_desktop {
+    display: none;
+  }
+
+  .header_mobile {
+    display: inline;
   }
 }
