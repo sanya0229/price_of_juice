@@ -160,7 +160,7 @@ const Home = () => {
                 <td>{item.activeSubstance}</td>
                 <td>{item.dosage}</td>
                 <td>{item.availability}</td>
-                <td>{item.price}</td>
+                <td>{'$' + item.price}</td>
               </tr>
             ))}
           </tbody>
